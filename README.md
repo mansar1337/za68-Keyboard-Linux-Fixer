@@ -45,6 +45,11 @@ This program fixes the ZA68 keyboard functionality on Linux systems by modifying
 - GRUB bootloader
 - Root access
 
+## Restore Backup
+ 1) `git clone https://github.com/mansar1337/za68-Keyboard-Linux-Fixer.git`
+ 2) `cd za68-Keyboard-Linux-Fixer`
+ 3) `chmod +x restore_GRUB.sh`
+ 4) `sudo ./restore_GRUB.sh`
 
 ## Install
  1) `git clone https://github.com/mansar1337/za68-Keyboard-Linux-Fixer.git`
