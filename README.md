@@ -44,6 +44,7 @@ This program fixes the ZA68 keyboard functionality on Linux systems by modifying
 - Linux operating system
 - GRUB bootloader
 - Root access
+- Internet Connection
 
 ### Restore Backup
  If you have broken GRUB, you can restore GRUB.
