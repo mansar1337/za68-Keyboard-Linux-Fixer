@@ -59,4 +59,9 @@ This program fixes the ZA68 keyboard functionality on Linux systems by modifying
  4) Run script at root: `sudo ./install.sh`
  5) After run fix reboot pc
 
+### Remove
+ 1) Go to repo folder
+ 2) Run remove script: `sudo ./remove.sh`
+ 3) Delete repo folder
+
 
