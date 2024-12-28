@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Diagnostics;
 
@@ -61,12 +61,15 @@ class Program
             if (lines[i].StartsWith("GRUB_CMDLINE_LINUX_DEFAULT="))
             {
                 string quirksParameter = $"usbcore.quirks={VENDOR_ID}:{PRODUCT_ID}:gki";
-                string currentLine = lines[i].Trim('"');
+                // Handle both single and double quotes
+                string currentLine = lines[i].Trim('\'', '"');
                 
                 if (!currentLine.Contains(quirksParameter))
                 {
-                    // Remove quotes and add parameter
-                    string[] parts = lines[i].Split('"');
+                    // Detect which quote type is used
+                    char quoteType = lines[i].Contains('\'') ? '\'' : '"';
+                    // Split by the detected quote type
+                    string[] parts = lines[i].Split(quoteType);
                     if (parts.Length >= 2)
                     {
                         string parameters = parts[1];
@@ -76,7 +79,7 @@ class Program
                             parameters += " ";
                         }
                         parameters += quirksParameter;
-                        lines[i] = $"GRUB_CMDLINE_LINUX_DEFAULT=\"{parameters}\"";
+                        lines[i] = $"GRUB_CMDLINE_LINUX_DEFAULT={quoteType}{parameters}{quoteType}";
                     }
                 }
                 found = true;
@@ -86,7 +89,7 @@ class Program
 
         if (!found)
         {
-            // If line not found, add new one
+            // Default to double quotes for new entries
             Array.Resize(ref lines, lines.Length + 1);
             lines[lines.Length - 1] = $"GRUB_CMDLINE_LINUX_DEFAULT=\"usbcore.quirks={VENDOR_ID}:{PRODUCT_ID}:gki\"";
         }
