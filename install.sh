@@ -18,6 +18,7 @@ if wget --progress=bar:force -O Za68Fix "$FILE_URL" 2>&1; then
     echo -e "${GREEN}✓ File successfully downloaded${NC}"
 else
     echo -e "${RED}✗ Failed to download file${NC}"
+    echo -e "${RED}✗ Install wget and check internet connection${NC}"
     exit 1
 fi
 
