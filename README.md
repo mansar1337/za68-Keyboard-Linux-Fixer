@@ -55,7 +55,6 @@ This program fixes the ZA68 keyboard functionality on Linux systems by modifying
  1) `git clone https://github.com/mansar1337/za68-Keyboard-Linux-Fixer.git`
  2) `cd za68-Keyboard-Linux-Fixer`
  3) `chmod +x install.sh`
- 4) `chmod +x za68fix`
- 5) `sudo ./install.sh`
+ 4) `sudo ./install.sh`
 
 
