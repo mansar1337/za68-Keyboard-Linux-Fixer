@@ -18,4 +18,11 @@ else
     echo "- restore_GRUB.sh not found"
 fi
 
+if [ -f /usr/local/bin/Za68Fix ]; then
+    sudo rm /usr/local/bin/Za68Fix
+    echo "- Za68Fix removed"
+else
+    echo "- Za68Fix not found"
+fi
+
 echo "Cleanup completed successfully"
