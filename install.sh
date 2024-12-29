@@ -61,6 +61,7 @@ echo -e "\n${YELLOW}Usage:${NC}"
 echo -e "  ${GREEN}•${NC} To fix keyboard:  ${BLUE}sudo za68fix${NC}"
 echo -e "  ${GREEN}•${NC} To restore GRUB:  ${BLUE}sudo restore_GRUB.sh${NC}"
 echo -e "  ${GREEN}•${NC} To fix keyboard with GUI:  ${BLUE}sudo Za68Fix${NC}"
+echo -e "\n${GREEN}•${NC} YT:  ${BLUE}@zxcerver645${NC}"
 echo -e "\n${YELLOW}Automatic keyboard fix gui will start in 10 seconds...${NC}"
 echo -e "${RED}Press Ctrl+C to cancel${NC}"
 sleep 10
