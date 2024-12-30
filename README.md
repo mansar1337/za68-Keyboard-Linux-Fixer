@@ -3,6 +3,9 @@
 ## Overview
 This program fixes the ZA68 keyboard functionality on Linux systems by modifying the GRUB bootloader configuration. It adds specific USB quirks parameters that help the system properly recognize and handle the keyboard.
 
+## Site
+You can visit program site: https://mansar1337.github.io/za68-fix/
+
 ## Technical Details
 
 ### 1. Initial Checks
